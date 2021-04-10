@@ -16,6 +16,10 @@
       width: 100%;
       height: 100vh;
     }
+
+    .pick {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -91,7 +95,6 @@
       spring.reset();
     });
 
-
     // ----
     // render
     // ----
@@ -105,7 +108,7 @@
     });
 
     // ----
-    // view
+    // on pointer down ( update spring )
     // ----
 
     const pointer = new THREE.Vector2();
@@ -126,6 +129,21 @@
         tweakpane.refresh();
       }
     });
+
+    // ----
+    // on pointer move ( toggle css class )
+    // ----
+
+    addEventListener('pointermove', (e) => {
+      updatePointer(e);
+      raycaster.setFromCamera(pointer, camera);
+      const intersections = raycaster.intersectObjects([ground, box]);
+      renderer.domElement.classList.toggle('pick', intersections[0]?.object === ground);
+    });
+
+    // ----
+    // view - on resize
+    // ----
 
     function resize(w, h, dpr = devicePixelRatio) {
       renderer.setPixelRatio(dpr);
