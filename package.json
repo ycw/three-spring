@@ -1,0 +1,15 @@
+{
+  "name": "three-spring",
+  "version": "0.1.1",
+  "author": "ycw (https://github.com/ycw)",
+  "repository": "github:ycw/three-spring",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/index.js",
+  "keywords": [
+    "threejs"
+  ],
+  "peerDependencies": {
+    "three": ">= 0.120.0"
+  }
+}
