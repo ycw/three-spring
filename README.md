@@ -4,8 +4,8 @@ Modeling spring motion in threejs.
 
 ## Examples
 
-- [Basic](examples/basic)
-- [Pointer](examples/pointer)
+- [Basic](//ycw.github.io/three-spring/examples/basic/)
+- [Pointer](//ycw.github.io/three-spring/examples/pointer/)
 
 ## Usage
 
@@ -29,8 +29,8 @@ renderer.setAnimationLoop(() => {
 
 ## Credits
 
-- [ mrdoob / three.js ](https://github.com/mrdoob/three.js/)
-- [ cocopon / tweakpane ](https://github.com/cocopon/tweakpane)
+- [ mrdoob / three.js ](//github.com/mrdoob/three.js)
+- [ cocopon / tweakpane ](//github.com/cocopon/tweakpane)
 
 ## License
 
