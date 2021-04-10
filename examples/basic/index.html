@@ -8,6 +8,7 @@
     body {
       padding: 0;
       margin: 0;
+      overflow: hidden;
     }
 
     canvas {
@@ -79,9 +80,7 @@
     // gui
     // ----
 
-    const tweakpane = new Tweakpane({
-      title: 'Spring Params'
-    });
+    const tweakpane = new Tweakpane({ title: 'Spring Params' });
     tweakpane.addInput(params, 'p', {
       x: { min: -5, max: 5, step: 1 },
       y: { min: -5, max: 5, step: 1 },
