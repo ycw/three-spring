@@ -7,11 +7,11 @@ export class Spring {
    * Construct a spring motion.
    * 
    * @param {Object} opt
-   * @param {THREE.Vector3} opt.p Position
+   * @param {THREE.Vector3} opt.p Pull position
    * @param {THREE.Vector3} opt.q Equilibrium position
    * @param {number} opt.f Frequency
    * @param {number} opt.k Amplitude attenuation per period
-   * @param {number} opt.A Max amplitude
+   * @param {number} opt.A Amplitude constraint
    */
   constructor({ p, q, f, k, A }) {
     this.p = p;
@@ -23,11 +23,11 @@ export class Spring {
   }
 
   /**
-   * Reset motion ( t = 0 ).
+   * Reset motion.
    */
   reset() {
     this._t = 0; // curr time
-    this._p = this.p.clone(); // init
+    this._p = this.p.clone(); // curr pos
   }
 
   /**
