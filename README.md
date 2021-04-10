@@ -7,6 +7,22 @@ Modeling spring motion in threejs.
 - [Basic](//ycw.github.io/three-spring/examples/basic/)
 - [Pointer](//ycw.github.io/three-spring/examples/pointer/)
 
+## Installation
+
+CDN
+
+```js
+import { Spring } from "//cdn.jsdelivr.net/gh/ycw/three-spring/src/index.js"
+```
+
+NPM 
+
+`$ npm i ycw/three-spring`
+
+```js
+import { Spring } from "three-spring"
+```
+
 ## Usage
 
 ```js
