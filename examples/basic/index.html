@@ -22,9 +22,9 @@
 <body>
   <script type='module'>
 
-    import * as THREE from '//cdn.skypack.dev/three'
-    import { OrbitControls } from '//cdn.skypack.dev/three/examples/jsm/controls/OrbitControls'
-    import Tweakpane from '//cdn.skypack.dev/tweakpane'
+    import * as THREE from '//cdn.skypack.dev/three@0.131.1'
+    import { OrbitControls } from '//cdn.skypack.dev/three@0.131.1/examples/jsm/controls/OrbitControls'
+    import Tweakpane from '//cdn.skypack.dev/tweakpane@3.0.5'
     import { Spring } from '../../src/index.js'
 
     // ----
@@ -80,21 +80,21 @@
     // gui
     // ----
 
-    const tweakpane = new Tweakpane({ title: 'Spring Params' });
-    tweakpane.addInput(params, 'p', {
+    const pane = new Pane({ title: 'Spring Params' });
+    pane.addInput(params, 'p', {
       x: { min: -5, max: 5, step: 1 },
       y: { min: -5, max: 5, step: 1 },
       z: { min: -5, max: 5, step: 1 },
     });
-    tweakpane.addInput(params, 'q', {
+    pane.addInput(params, 'q', {
       x: { min: -5, max: 5, step: 1 },
       y: { min: -5, max: 5, step: 1 },
       z: { min: -5, max: 5, step: 1 },
     });
-    tweakpane.addInput(params, 'f', { min: 1, max: 10, step: 0.1 });
-    tweakpane.addInput(params, 'k', { min: 0, max: 1, step: 0.05 });
-    tweakpane.addInput(params, 'A', { min: 1, max: 10, step: 1 });
-    tweakpane.on('change', ({ presetKey, value }) => {
+    pane.addInput(params, 'f', { min: 1, max: 10, step: 0.1 });
+    pane.addInput(params, 'k', { min: 0, max: 1, step: 0.05 });
+    pane.addInput(params, 'A', { min: 1, max: 10, step: 1 });
+    pane.on('change', ({ presetKey, value }) => {
       spring[presetKey] = value;
       spring.reset();
     });
